@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Bryan Cantz">
+
+        <title>Music Player</title>
+
+        <link href="css/style.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+        <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+        <script src="http://code.jquery.com/ui/jquery-ui-git.js"></script>
+        <script src="/js/audio.min.js"></script>
+        <script src="js/player.js"></script>
+    </head>
+    <body>
+        <div id="music-player">
+            <div id="player">
+                <div id="song-details">
+                    <h1 id="song-title">Title</h1><p1 id="song-artist">by artist</p1>
+                    <p1 id="song-album">Album</p1>
+                </div>
+                <div id="cart-details">
+                    <p1>Subtotal: <p3 id="subtotal">0.00$</p3></p1>
+                    <p1>Discount: <p3 id="discount">-0.00$</p3></p1>
+                    <p2>Total: <p3 id="total">0.00$</p3></p2>
+                </div>
+                <img src="http://placehold.it/200x200">
+                <audio id="audio" src="" preload="auto"></audio>
+                <div id="volumecont">
+                    <div id="volume"></div>
+                </div>
+            </div>
+            <div id="music-list">
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Artist</th>
+                        <th>Price</th>
+                        <th>Buy</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>
