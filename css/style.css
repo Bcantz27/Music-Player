@@ -33,13 +33,12 @@ h1 {
 }
 
 #player img {
-    margin-left: 50px;
 }
 
 #song-details {
     position: absolute;
     left: 42%;
-    width: 400px;
+    width: 45%;
     height: 200px;
 }
 
@@ -48,12 +47,16 @@ h1 {
 }
 
 #cart-details {
+    -webkit-box-shadow: inset 0px 0px 11px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px 0px 11px 2px rgba(0,0,0,0.75);
+    box-shadow: inset 0px 0px 11px 2px rgba(0,0,0,0.75);
     background-color: aliceblue;
     position: absolute;
     padding: 8px;
-    left: 42%;
-    top: 120px;
+    left: 41%;
+    top: 110px;
     width: 140px;
+    height: 85px;
     border-radius: 8px;
     border: 1px solid black;
 }
@@ -74,13 +77,29 @@ h1 {
     padding-right: 10px;
 }
 
+#checkout {
+    float: right;
+    border: 1px solid black;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+#checkout:hover {
+    border: 2px solid black;
+}
+
+#checkout:active {
+    text-decoration: underline;
+}
+
 #volumecont {
     position: relative;
     width: 350px;
     height: 30px;
     margin: 0px auto;
     margin-top: 5px;
-    background: url('/images/volume-background.png') no-repeat left top;
+    background: url('./images/volume-background.png') no-repeat left top;
 }
 
 #volume {
@@ -89,7 +108,7 @@ h1 {
     margin: 0 auto;
     height:15px;
     width: 300px;
-    background: url('/images/volume-empty.png') no-repeat left top;
+    background: url('./images/volume-empty.png') no-repeat left top;
     border: none;
     outline: none;
 }
@@ -98,7 +117,7 @@ h1 {
     height:15px;
     width: 300px;
     position: absolute;
-    background: url('/images/volume-full.png') no-repeat left top;
+    background: url('./images/volume-full.png') no-repeat left top;
     border: none;
     outline: none;
 }
@@ -107,7 +126,7 @@ h1 {
     width: 23px;
     height:24px;
     top: -3px;
-    background: url('/images/volume-knob.png') no-repeat left top;
+    background: url('./images/volume-knob.png') no-repeat left top;
     position: absolute;
     margin-left: -10px;
     margin-right: 5px;
@@ -118,14 +137,26 @@ h1 {
 
 #music-list table{
     cursor: pointer;
+    border-collapse: collapse;
     width: 75%;
     margin: auto;
     text-align: center;
+    border: 1px solid black;
 }
 
 #music-list tr{
     width 25%;
     margin: auto;
+}
+
+#music-list th {
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+}
+
+#music-list tr td {
+    border-right: 2px solid black;
+    border-bottom: 1px solid black;
 }
 
 a:visited {

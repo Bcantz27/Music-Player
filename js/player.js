@@ -80,6 +80,9 @@ function printSongsInCart(){
 
 function updateCart() {
     cartTotal = cartSubtotal - cartDiscount;
+    if(cartTotal < 0) {
+        cartTotal = 0;
+    }
 
     $("#subtotal").html(cartSubtotal.toFixed(2) + "$");
     $("#discount").html("-"+ cartDiscount.toFixed(2) + "$");
@@ -108,17 +111,17 @@ function setSong(index) {
 
 function populateSongs() {
     //TODO: Server-side population, need php
-    songs[0] = new Song("Give My Regards", "Mitis", "Give My Regards", "/music/Give My Regards.mp3","/images/mitisart.jpg");
-    songs[1] = new Song("In Congress", "Mitis", "Give My Regards", "/music/In Congress.mp3","/images/mitisart.jpg");
-    songs[2] = new Song("Modify", "Mitis", "Give My Regards", "/music/Modify.mp3","/images/mitisart.jpg");
-    songs[3] = new Song("Burn", "Subvibe", "This is Subvibe", "/music/Burn.mp3","/images/this_is_subvibe.jpg");
-    songs[4] = new Song("Velocity", "Subvibe", "This is Subvibe", "/music/Velocity.mp3","/images/this_is_subvibe.jpg");
-    songs[5] = new Song("Day N Nite", "Kid Cudi", "Man on the Moon", "/music/Day n Nite.mp3","/images/Man_On_The_Moon.jpg");
-    songs[6] = new Song("Sky Might Fall", "Kid Cudi", "Man on the Moon", "/music/Sky Might Fall.mp3","/images/Man_On_The_Moon.jpg");
+    songs[0] = new Song("Give My Regards", "Mitis", "Give My Regards", "./music/Give My Regards.mp3","./images/mitisart.jpg");
+    songs[1] = new Song("In Congress", "Mitis", "Give My Regards", "./music/In Congress.mp3","./images/mitisart.jpg");
+    songs[2] = new Song("Modify", "Mitis", "Give My Regards", "./music/Modify.mp3","./images/mitisart.jpg");
+    songs[3] = new Song("Burn", "Subvibe", "This is Subvibe", "./music/Burn.mp3","./images/this_is_subvibe.jpg");
+    songs[4] = new Song("Velocity", "Subvibe", "This is Subvibe", "./music/Velocity.mp3","./images/this_is_subvibe.jpg");
+    songs[5] = new Song("Day N Nite", "Kid Cudi", "Man on the Moon", "./music/Day N Nite.mp3","./images/Man_On_The_Moon.jpg");
+    songs[6] = new Song("Sky Might Fall", "Kid Cudi", "Man on the Moon", "./music/Sky Might Fall.mp3","./images/Man_On_The_Moon.jpg");
 }
 
 function displaySongs() {
     for (var i = 0; i < 7; i++) {
-        $("#music-list table").append("<tr class='song' data-id='"+ i +"'><td><a href='#'>" + songs[i].title + "</a></td><td>" + songs[i].artist + "</td><td>"+ songs[i].price + "</td><td class='buy'><i class='fa fa-plus-square'></i></td></tr>");
+        $("#music-list table").append("<tr class='song' data-id='"+ i +"'><td><a href='#'>" + songs[i].title + "</a></td><td>" + songs[i].artist + "</td><td>"+ songs[i].price + "$</td><td class='buy'><i class='fa fa-plus-square fa-2x'></i></td></tr>");
     }
 }
